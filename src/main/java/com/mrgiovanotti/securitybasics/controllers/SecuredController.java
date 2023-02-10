@@ -5,7 +5,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping("/ap1/v1/secured")
+@RequestMapping("/api/v1/secured")
 public class SecuredController {
 
 	@GetMapping("/user")
@@ -16,6 +16,11 @@ public class SecuredController {
 	@GetMapping("/admin")
 	public String admin() {
 		return "<h1>Hello, you are an admin user</h1>";
+	}
+
+	@GetMapping("/admin-user")
+	public String adminOrUser() {
+		return "<h1>Hello, you can be an admin or a normal user</h1>";
 	}
 
 }
